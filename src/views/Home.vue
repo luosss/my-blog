@@ -36,6 +36,9 @@ export default {
 <style scoped>
 .home {
   padding-top: 2rem;
+  min-height: 100vh;
+  background: radial-gradient(circle at top right, rgba(102, 126, 234, 0.05) 0%, transparent 20%),
+               radial-gradient(circle at bottom left, rgba(118, 75, 162, 0.05) 0%, transparent 20%);
 }
 
 .container {

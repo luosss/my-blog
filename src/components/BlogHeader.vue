@@ -32,10 +32,14 @@ export default {
 
 <style scoped>
 .blog-header {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, var(--primary-color, #667eea) 0%, var(--secondary-color, #764ba2) 100%);
   color: white;
   padding: 0;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  transition: background 0.3s ease;
 }
 
 .header-container {

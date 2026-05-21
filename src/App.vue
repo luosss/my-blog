@@ -26,6 +26,7 @@ body {
   background-color: var(--background-color, #f8f9fa);
   color: var(--text-primary-color, #2c3e50);
   line-height: 1.6;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 #app {

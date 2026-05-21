@@ -65,6 +65,20 @@ export default {
   border-radius: 12px;
   box-shadow: 0 6px 16px rgba(0,0,0,0.1);
   padding: 2.5rem;
+  position: relative;
+  overflow: hidden;
+  transition: background-color 0.3s ease;
+}
+
+.about-content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary-color, #667eea) 0%, var(--secondary-color, #764ba2) 100%);
+  border-radius: 12px 12px 0 0;
 }
 
 h1 {

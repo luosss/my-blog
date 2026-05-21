@@ -55,6 +55,13 @@ export default {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
   padding: 1.5rem;
   height: fit-content;
+  transition: all 0.3s ease;
+  border: 1px solid var(--border-color, #eee);
+}
+
+.blog-sidebar:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  transform: translateY(-3px);
 }
 
 .widget {

@@ -163,14 +163,17 @@ export default {
   border-radius: 12px;
   box-shadow: 0 6px 16px rgba(0,0,0,0.1);
   overflow: hidden;
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s ease;
   display: flex;
   flex-direction: column;
+  position: relative;
+  z-index: 1;
 }
 
 .post-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+  transform: translateY(-8px);
+  box-shadow: 0 16px 32px rgba(0,0,0,0.18);
+  border: 1px solid var(--primary-color, #667eea);
 }
 
 .post-image img {
