@@ -160,20 +160,44 @@ export default {
 
 .post-card {
   background-color: var(--surface-color, white);
-  border-radius: 12px;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
   overflow: hidden;
-  transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s ease;
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s, background-color 0.3s ease;
   display: flex;
   flex-direction: column;
   position: relative;
   z-index: 1;
+  border: 1px solid var(--border-color, #eee);
+  transform-style: preserve-3d;
 }
 
 .post-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 16px 32px rgba(0,0,0,0.18);
+  transform: translateY(-12px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
   border: 1px solid var(--primary-color, #667eea);
+  
+  /* 添加微妙的光泽效果 */
+  position: relative;
+}
+
+.post-card:hover::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at center, rgba(255,255,255,0.4) 0%, transparent 70%);
+  transform: rotate(30deg);
+  pointer-events: none;
+  animation: shine 1.5s ease-in-out infinite;
+}
+
+@keyframes shine {
+  0% { transform: translateX(-100%) translateY(-100%) rotate(30deg); }
+  20% { transform: translateX(100%) translateY(100%) rotate(30deg); }
+  100% { transform: translateX(100%) translateY(100%) rotate(30deg); }
 }
 
 .post-image img {

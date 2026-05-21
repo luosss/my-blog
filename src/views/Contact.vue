@@ -78,11 +78,12 @@ export default {
   margin: 0 auto;
   padding: 0 1rem;
   background-color: var(--surface-color, white);
-  border-radius: 12px;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.12);
   overflow: hidden;
   position: relative;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  border: 1px solid var(--border-color, #eee);
 }
 
 .container::before {
@@ -91,9 +92,14 @@ export default {
   top: 0;
   left: 0;
   right: 0;
-  height: 4px;
+  height: 6px;
   background: linear-gradient(90deg, var(--primary-color, #667eea) 0%, var(--secondary-color, #764ba2) 100%);
-  border-radius: 12px 12px 0 0;
+  border-radius: 20px 20px 0 0;
+}
+
+.container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 50px rgba(0,0,0,0.18);
 }
 
 h1 {

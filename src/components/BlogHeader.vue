@@ -35,11 +35,16 @@ export default {
   background: linear-gradient(135deg, var(--primary-color, #667eea) 0%, var(--secondary-color, #764ba2) 100%);
   color: white;
   padding: 0;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.12);
   position: sticky;
   top: 0;
   z-index: 100;
-  transition: background 0.3s ease;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+}
+
+.blog-header:hover {
+  box-shadow: 0 12px 40px rgba(0,0,0,0.18);
 }
 
 .header-container {
